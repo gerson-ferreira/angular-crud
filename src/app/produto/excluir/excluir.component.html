@@ -1,0 +1,54 @@
+<div class="container main-container">
+  <h4>Excluir {{ produto.nome }}</h4>
+  <br />
+  <h5>Você tem certeza disso?</h5>
+
+  <div class="row">
+    <div class="col-md-6">
+      <dl class="row">
+        <dt class="col-sm-2">
+          <label class="control-label">Nome</label>
+        </dt>
+        <dd class="col-sm-10">
+          {{ produto.nome }}
+        </dd>
+        <dt class="col-sm-2">
+          <label class="control-label">Descrição</label>
+        </dt>
+        <dd class="col-sm-10">
+          {{ produto.descricao }}
+        </dd>
+        <dt class="col-sm-2">
+          <label class="control-label">Fabricação</label>
+        </dt>
+        <dd class="col-sm-10">
+          {{ fabricacao }}
+        </dd>
+        <dt class="col-sm-2">
+          <label class="control-label">Tamanho</label>
+        </dt>
+        <dd class="col-sm-10">
+          {{ tamanho }}
+        </dd>
+        <dt class="col-sm-2">
+          <label class="control-label">Valor</label>
+        </dt>
+        <dd class="col-sm-10">
+          R${{ produto.valor }}
+        </dd>
+      </dl>
+
+      <div>
+        <a
+          (click)="excluirProduto()"
+          href="javascript:void(0)"
+          class="btn btn-danger"
+          >Excluir</a
+        >&nbsp;
+        <a class="btn btn-info" href="javascript:window.history.back();"
+          >Voltar</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

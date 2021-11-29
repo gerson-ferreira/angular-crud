@@ -1,0 +1,46 @@
+<div class="container main-container">
+  <h1>Detalhes do {{ produto.nome }}</h1>
+
+  <div>
+    <h4>Informação somente leitura</h4>
+    <hr />
+    <dl class="row">
+      <dt class="col-sm-2">
+        <label class="control-label">Nome</label>
+      </dt>
+      <dd class="col-sm-10">
+        {{ produto.nome }}
+      </dd>
+      <dt class="col-sm-2">
+        <label class="control-label">Descrição</label>
+      </dt>
+      <dd class="col-sm-10">
+        {{ produto.descricao }}
+      </dd>
+      <dt class="col-sm-2">
+        <label class="control-label">Fabricação</label>
+      </dt>
+      <dd class="col-sm-10">
+        {{ fabricacao }}
+      </dd>
+      <dt class="col-sm-2">
+        <label class="control-label">Tamanho</label>
+      </dt>
+      <dd class="col-sm-10">
+        {{ tamanho }}
+      </dd>
+      <dt class="col-sm-2">
+        <label class="control-label">Valor</label>
+      </dt>
+      <dd class="col-sm-10">
+        R${{ produto.valor }}
+      </dd>
+    </dl>
+  </div>
+  <div>
+    <a class="btn btn-dark" [routerLink]="['/produtos/editar', produto.id]"
+      >Editar</a
+    >&nbsp;
+    <a class="btn btn-info" [routerLink]="['/produtos/listar-todos']">Voltar</a>
+  </div>
+</div>
